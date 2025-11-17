@@ -1,6 +1,27 @@
 
 
+function generateSignature(name, title, company) {
+  if (!name || typeof name !== "string") return "";
 
+  const intial = name.trim()[0].toUpperCase() 
+  const charCode = intial.charCodeAt(0)
+  const tail = concatTC(title, company)
+
+  if (charCode >= 65 && charCode < 73) {
+    return `>>${name}${tail}`
+  } else if (charCode >= 73 && charCode < 82) {
+    return `--${name}${tail}`
+  } else if (charCode >= 82 && charCode <= 90) {
+    return `::${name}${tail}`
+  }
+
+  return name + tail; // fallback
+}
+
+
+function concatTC (t, c) {
+  return `, ${t} at ${c}`
+}
 
 
 
