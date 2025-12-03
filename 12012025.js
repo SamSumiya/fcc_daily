@@ -1,14 +1,4 @@
-function toSnake(camel) {
-  let opt = '' 
-
-  for ( let c of camel ) {
-    if (c === c.toLowerCase()) {
-      opt += c 
-    } else {
-      opt += '_'
-      opt += c.toLowerCase()
-    }
-  }
-
-  return opt 
+function convertToKm(miles) {
+  const rawNumber = miles * 1.60934
+  return Number(rawNumber.toFixed(2));
 }
