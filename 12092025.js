@@ -15,3 +15,14 @@ function mostFrequent(arr) {
 
   return res 
 }
+
+/* 
+
+in this question, we need to use map as object does corse the data type to string which wont work with input 
+such as non-string data. 
+
+additinally, we can always set a maxCount checker in the loop, 
+so we dont need to wait for the new map to be populated before finding the the most frequent element. 
+
+
+*/ 
