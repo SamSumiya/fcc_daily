@@ -1,3 +1,4 @@
+// Imperative 
 function compressString(sentence) {
   const freq = getFreq(sentence)
   const arr = sentence.split(' ')
@@ -30,3 +31,6 @@ function getFreq(sentence) {
 
   return freq 
 }
+
+// Functional 
+
